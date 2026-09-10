@@ -26,7 +26,7 @@ Configs: 475-base = #475 optimizations only (acceptance mode off, rounding-class
 
 ## Reports
 
-Each report gives the served configuration and one-shot run figures from that folder's `receipt.json`, describes the game the model actually produced, shows the title screen and an in-progress frame, and ends with the playability verdict. Screenshots were taken over HTTP in Chromium at a 960x720 viewport; the two working games were driven by a small in-page autopilot that flaps toward the centre of the next gap. The gameplay clips (working games only) are the raw Playwright recordings converted to GIF.
+Each report gives the served configuration and one-shot run figures from that folder's `receipt.json`, describes the game the model actually produced, shows the title screen and an in-progress frame, and ends with the playability verdict. Screenshots were taken over HTTP in Chromium at device scale factor 2, each at a per-game viewport sized so the whole game UI fits with nothing clipped; the two working games were driven by a small in-page autopilot that flaps toward the centre of the next gap. The gameplay clips (working games only) are the raw Playwright recordings; the WebM is that recording as-is, the MP4 is a Twitter/X-embeddable 16:9 re-encode (portrait game centred on a blurred background), and the GIFs are palette-encoded excerpts.
 
 ---
 
@@ -66,11 +66,11 @@ A second, non-fatal defect throws on every flap: `noiseBurst()` (line 524) assig
 | --- | --- |
 | ![Fluffwing title screen](./screenshots/478-typical-0.2-64k-title.png) | ![Fluffwing mid-play, score 9](./screenshots/478-typical-0.2-64k.png) |
 
-Gameplay (raw recording → GIF):
+Gameplay (autopilot, raw recording):
 
-![Fluffwing gameplay](./gifs/478-typical-0.2-64k.gif)
+![Fluffwing gameplay](./gifs/478-typical-0.2-64k-480.gif)
 
-Raw footage: [MP4](./videos/478-typical-0.2-64k.mp4) · [WebM](./videos/478-typical-0.2-64k.webm)
+Full-size GIF: [960×1098, 5 s, 14 MB](./gifs/478-typical-0.2-64k.gif) (inline clip above: 480×548, 8 s, 7.3 MB) · MP4 [1920×1080, 21 s](./videos/478-typical-0.2-64k.mp4) (Twitter/X-embeddable 16:9) · WebM [1120×1280, 21 s](./videos/478-typical-0.2-64k.webm) (raw recording)
 
 **Verdict: plays.** No fatal console errors (only a `favicon.ico` 404). The rAF loop survives input, state goes ready → play, flapping raises the bird, the mushroom pipes scroll, and the score increments. In the captured run the autopilot cleared many pipe pairs and reached score 12 (the still is at score 9, ×7 streak).
 
@@ -128,11 +128,11 @@ Classification: model logic bug (wrong colour-blend helper for the data shape).
 | --- | --- |
 | ![Pip title screen](./screenshots/488-bare-typical-0.2-64k-title.png) | ![Pip mid-play, score 10](./screenshots/488-bare-typical-0.2-64k.png) |
 
-Gameplay (raw recording → GIF):
+Gameplay (autopilot, raw recording):
 
-![Pip gameplay](./gifs/488-bare-typical-0.2-64k.gif)
+![Pip gameplay](./gifs/488-bare-typical-0.2-64k-480.gif)
 
-Raw footage: [MP4](./videos/488-bare-typical-0.2-64k.mp4) · [WebM](./videos/488-bare-typical-0.2-64k.webm)
+Full-size GIF: [960×930, 5 s, 11 MB](./gifs/488-bare-typical-0.2-64k.gif) (inline clip above: 480×466, 8 s, 6.3 MB) · MP4 [1920×1080, 21 s](./videos/488-bare-typical-0.2-64k.mp4) (Twitter/X-embeddable 16:9) · WebM [1320×1280, 21 s](./videos/488-bare-typical-0.2-64k.webm) (raw recording)
 
 **Verdict: plays.** No fatal console errors (only a `favicon.ico` 404). State transitions ready → playing on input, physics and pipe spawning run, and the score is drawn on the canvas and increments on each pass. In the captured run the autopilot cleared many pipe pairs and reached score 12 (the still is at score 10, best 10).
 
