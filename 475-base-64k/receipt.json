@@ -1,0 +1,27 @@
+{
+  "config": "475-base",
+  "worktree_sha": "aab2aca74cf105a6d6ab124c221b7d5b761403e9",
+  "served_note": "27d5ff6b lanes (aux-rebase tip); #475 opts only, no lossy acceptance mode (rounding-class)",
+  "pack": "/Users/davidtai/.mtplx/models/Youssofal--Qwen3.8-Flash-Next-MTPLX-Optimized-Speed",
+  "artifact_revision": "29ba90f82124961d0d902a9ea9bbb1034972af2f",
+  "env": {},
+  "prompt": "Make the ultimate adorable cute and beautiful flappy bird game in HTML. write a complete single-file Flappy Bird in HTML/JS, playable in a browser, no external assets, generate your own assets",
+  "prompt_sha256": "c6cbd18ba7cb2bf0c59a0595d2e0a606346bad90c27b06d21c7b8473add205a1",
+  "sampler": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "seed": 20260829,
+    "reasoning_effort": "xhigh",
+    "max_tokens": 65536
+  },
+  "prompt_tokens": 92,
+  "completion_tokens": 51297,
+  "ttft_s": 0.4471677920082584,
+  "decode_tok_s": 90.11246604526693,
+  "wall_s": 569.7024800840009,
+  "finish_reason": "stop",
+  "mtp_accept": null,
+  "verdict_line": null,
+  "html_extraction": "last ```html fenced block"
+}

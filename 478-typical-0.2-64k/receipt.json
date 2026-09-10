@@ -1,0 +1,29 @@
+{
+  "config": "478-typical-0.2",
+  "worktree_sha": "50d4c35f3709cd5c63f6cb68e678776d6d8da4a2",
+  "served_note": "264e0835 lanes (typical-rebase tip)",
+  "pack": "/Users/davidtai/.mtplx/models/Youssofal--Qwen3.8-Flash-Next-MTPLX-Optimized-Speed",
+  "artifact_revision": "29ba90f82124961d0d902a9ea9bbb1034972af2f",
+  "env": {
+    "MTPLX_FABLE_TYPICAL_THRESHOLD": "0.2"
+  },
+  "prompt": "Make the ultimate adorable cute and beautiful flappy bird game in HTML. write a complete single-file Flappy Bird in HTML/JS, playable in a browser, no external assets, generate your own assets",
+  "prompt_sha256": "c6cbd18ba7cb2bf0c59a0595d2e0a606346bad90c27b06d21c7b8473add205a1",
+  "sampler": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "seed": 20260829,
+    "reasoning_effort": "xhigh",
+    "max_tokens": 65536
+  },
+  "prompt_tokens": 92,
+  "completion_tokens": 46051,
+  "ttft_s": 0.5833594590076245,
+  "decode_tok_s": 98.89525748968475,
+  "wall_s": 466.23764025000855,
+  "finish_reason": "stop",
+  "mtp_accept": 0.8558,
+  "verdict_line": "[typical-accept] NOT distribution-exact; threshold=0.2 eps=1 delta=0.2 positions=37227 accepted=31859 resamples=5368 accept_rate=0.8558 mean_entropy=0.2893 tokens_per_cycle=3.245 accepted_by_depth=[12492, 10546, 8821] generated=46051 verify_calls=14192",
+  "html_extraction": "last ```html fenced block"
+}
